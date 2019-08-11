@@ -1,0 +1,6 @@
+<!--pages/exam02/exam02.wxml-->
+<text>pages/exam02/exam02.wxml</text>
+<view class="box">
+  <text class="red">这是内容</text>
+</view>
+<image src="../../images/weixin.jpg" class="pic" lazy-load="true"></image>

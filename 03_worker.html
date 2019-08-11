@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>webWorker</title>
+</head>
+<body>
+  <button>按钮</button>
+  <span></span>
+  <script>
+  window.onload=function(){
+    //非常耗时的程序
+    for(var i=0;i<10000000000;i++){
+    }
+    //执行完前边的程序
+    var span=document.querySelector('span');
+    span.innerHTML='获取到了商品列表';
+    console.log('执行结束');
+  }
+    
+  </script>
+</body>
+</html>

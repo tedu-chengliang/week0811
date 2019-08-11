@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>webWorker</title>
+</head>
+<body>
+  <button>按钮</button>
+  <h2></h2>
+  <ul>
+    
+  </ul>
+  <script>
+    //1.创建worker线程
+    var w=new Worker('js/04.js');
+    //2.执行这个线程
+    w.postMessage(100000000);
+    //3.获取执行的结果
+    w.onmessage=function(e){
+      document.querySelector('h2').innerHTML=e.data;
+    }
+    //列表数据
+    var list=['北京','上海','深圳','广州'];
+    var ul=document.querySelector('ul');
+    for(var i=0;i<list.length;i++){
+      //遍历数组中的数据，把数据添加到li中
+      var li=document.createElement('li');
+      li.innerHTML=list[i];
+      //把创建的元素添加到ul之间
+      ul.appendChild(li);
+    }
+  </script>
+</body>
+</html>

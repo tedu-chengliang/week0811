@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>欢迎: <span></span> </h1>
+  <a href="javascript:;">退出</a>
+  <script>
+    //读取存储的用户名
+    document.querySelector('span').innerHTML=sessionStorage.getItem('uname');
+    //删除sessionStorage
+    var a=document.querySelector('a');
+    a.onclick=function(){
+      sessionStorage.clear();
+      alert('退出成功');
+      location.href='07_login.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>使用浏览器存储用户的数据</h2>
+  <ul>
+    <li>cookie存储————文件，读取文件</li>
+    <li>webStorage————浏览器存储</li>
+    <li>flash</li>
+  </ul>
+  <h2>webStorage</h2>
+  <ul>
+    <li>localStorage</li>
+    <li>sessionStorage</li>
+  </ul>
+  <a href="06_storage.html">跳转</a>
+  <script>
+    //web存储
+    //1.session
+    //创建存储
+    //sessionStorage.setItem('name','tom');
+    //删除存储
+    //sessionStorage.removeItem('name');
+    //获取存储
+    //var name=sessionStorage.getItem('name');
+    //console.log(name);
+    //获取存储的长度
+    //console.log( sessionStorage.length );
+    //清除所有的存储
+    //sessionStorage.clear();
+    //2.local
+    //创建存储
+    localStorage.setItem('age',18);
+    localStorage.setItem('uname','root');
+    //获取存储
+    //console.log( localStorage.getItem('age') );
+    //移除存储
+    //localStorage.removeItem('age');
+    //清空所有
+    //localStorage.clear();
+    //获取存储的长度
+    console.log( localStorage.length );
+  </script>
+</body>
+</html>

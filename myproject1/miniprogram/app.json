@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/exam01/exam01",
+    "pages/exam02/exam02",
+    "pages/exam03/exam03"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F24638",
+    "navigationBarTitleText": "汽车维修市场",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/exam01/exam01",
+        "text":"首页",
+        "iconPath":"images/weixin.jpg"
+      },
+      {
+        "pagePath": "pages/exam02/exam02",
+        "text": "订单"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

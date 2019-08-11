@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="login">
+    用户名: <input type="text" id="uname"> <br>
+    密码: <input type="password" id="upwd"> <br>
+    <input type="checkbox" checked id="remember">记住用户名<br>
+    <input type="button" value="登录">
+  </div>
+  <script>
+    //1.获取dom元素
+    var input=document.querySelectorAll('.login>input');
+    //2.绑定点击事件
+    input[3].onclick=function(){
+      //2.1获取用户名和密码
+      var uname=input[0].value;
+      var upwd=input[1].value;
+      //2.2获取记录状态
+      var isRemember=input[2].checked;
+      console.log(uname,upwd,isRemember);
+      //2.3判断如果用户名和密码都正确
+      if(uname==='root' && upwd==='123456'){
+        //2.4判断是否选择了记录用户名
+        if(isRemember){
+          //如果记录，添加到web存储
+          localStorage.setItem('uname',uname);
+          localStorage.setItem('upwd',upwd);
+        }else{
+          //清空两项
+          localStorage.removeItem('uname');
+          localStorage.removeItem('upwd');
+        }
+        //2.5登录成功，跳转到首页
+        //sessionStorage存储，下一页会用到用户名
+        sessionStorage.setItem('uname',uname);
+        location.href="08_index.html";
+      }
+    }
+    //3.打开网页，自动获取用户名和密码
+    input[0].value=localStorage.getItem('uname');
+    input[1].value=localStorage.getItem('upwd');
+  </script>
+</body>
+</html>

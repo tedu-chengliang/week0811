@@ -1,0 +1,12 @@
+/* pages/exam02/exam02.wxss */
+@import "../../style/common.wxss"
+
+.box{
+  width:100px;
+  height:100px;
+  background:pink;
+}
+.pic{
+  width: 75rpx;
+  height:75rpx;
+}
